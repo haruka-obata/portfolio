@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+/* ==========
+  全体設定
+========== */
+.header {
+    height: 4rem;
+    background-color: #2C3E50;
+    display: flex;
+    align-items: center;
+}
+
+.header_btn {
+  margin-left: auto;
+}
+.contact_btn {
+    background-color: #3498DB;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+	margin-right: 1rem;
+	margin-left: auto;
+}
+
+.footer {
+    height: 2rem;
+    background-color: #2C3E50;
+}
+
+body {
+    font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    background-color: #ECF0F1;
+    color: #2D3436;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ==========
+  リンク
+========== */
+a {
+    color: #3498DB;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980B9;
+    text-decoration: underline;
+}
+
+/* ==========
+  セクション・カード
+========== */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    background-color: #F7F9FA;
+    border: 1px solid #D5DBDB;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========
+  見出し
+========== */
+.h_sub {
+    font-size: 1rem;
+    line-height: 1.2; /* 行の高さをフォントサイズの1.2倍に */
+    display: block;   /* ブロック化して改行を安定させる */
+    margin-top: 0.2rem; /* h1との間隔を微調整 */
+}
+
+h1, h2 {
+    border-left: 15px solid #3498DB;
+    color: #2C3E50;
+    font-size: 2rem;
+    padding-left: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+h3 {
+    color: #2C3E50;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+h4{
+    color: #2C3E50;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+/* ==========
+  ボタン
+========== */
+button, .btn {
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+button:hover, .btn:hover {
+    background-color: #2980B9;
+}
+
+/* ==========
+  リスト
+========== */
+.ul_sp {
+  margin-left: 17rem;
+}
+
+ul {
+  margin-left: 2rem;
+}
+
+.kikan .gyokai {
+	width:20%;
+}
+
+.gaiyo {
+	width:60%;
+}
+
+td {
+	vertical-align: top;
+}
+
+/* ==========
+  画像
+========== */
+.header_img {
+    width: 125px;
+    height: auto;
+    display: block;
+    margin-left: 1rem;
+}
+
+.Haruka img {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;  /* 円形にする */
+  float: left;
+  margin-bottom: 15rem;
+  margin-left: 2rem;
+  margin-right: 3rem;
+}
+
+.shikaku{
+  width: 200px;
+  height: auto;
+  display: flex;
+  margin-left: 4rem;
+}
+
+.img_left {
+	float: left;
+	margin-right: 2rem;
+}
+
+img_right{
+	  float: right;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+
+/* ==========
+  main
+========== */
+profile{
+	width: 100%:
+}
+
+Haruka prof{
+	width: 50%:
+	float: right;
+    margin-left: 1rem;
+}
+
+.contact_form{
+	text-align:  center;
+}
+
+.servicenaiyo {
+  margin-left: 2rem;
+}
+
+/* ==========
+  共通
+========== */
+.div_2rem {
+  margin-left: 2rem;
+}
+
+.div_4rem {
+  margin-left: 4rem;
+}
+
+
+/* ==========
+  ABOUT
+========== */
+.keireki {
+  margin-left: 2rem;
+}
+
+.project{
+  margin-left: 2rem;
+}
+
+/* ==========
+  footer
+========== */
+.copyright{
+    color: white;
+    text-align:center;
+}
