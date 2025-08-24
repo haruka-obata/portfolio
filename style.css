@@ -3,14 +3,14 @@
 /* ==========
   全体設定
 ========== */
-.header {
+. {
     height: 4rem;
     background-color: #2C3E50;
     display: flex;
     align-items: center;
 }
 
-.header_btn {
+._btn {
   margin-left: auto;
 }
 .contact_btn {
