@@ -205,6 +205,11 @@ Haruka prof{
   margin-left: 2rem;
 }
 
+.right{
+	text-align: right;
+    margin-right: 3rem;
+}
+
 /* ==========
   共通
 ========== */
