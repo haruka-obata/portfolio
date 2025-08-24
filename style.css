@@ -241,6 +241,23 @@ Haruka prof{
   レスポンシブ対応
 ========== */
 @media screen and (max-width: 768px) {
+  /* ヘッダー内の配置は横並びのまま */
+  .header {
+    flex-direction: row;  /* ← column から修正 */
+    justify-content: space-between; /* ロゴとボタンを両端配置 */
+    align-items: center;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .header_img {
+    margin-left: 1rem;
+  }
+
+  .header_btn {
+    margin-right: 1rem;
+  }
+  
 /* 見出しサイズ調整 */
   h1, h2 {
     font-size: 1.5rem;
