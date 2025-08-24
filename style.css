@@ -91,7 +91,7 @@ h1, h2 {
 h3 {
     color: #2C3E50;
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-left: 1rem;
 }
 
@@ -124,7 +124,7 @@ button:hover, .btn:hover {
   リスト
 ========== */
 ul {
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .kikan .gyokai {
@@ -221,11 +221,7 @@ Haruka prof{
   ABOUT
 ========== */
 .keireki {
-  margin-left: 2rem;
-}
-
-.project{
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 /* ==========
