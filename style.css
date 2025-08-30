@@ -209,11 +209,6 @@ a:hover {
    レスポンシブ
 ------------------------------ */
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .profile {
     flex-direction: column;
     align-items: center;
