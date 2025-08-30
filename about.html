@@ -1,279 +1,116 @@
 <!DOCTYPE html>
-<html lang="ja" xmlns:th="http://www.thymeleaf.org"
-      th:replace="~{layout :: layout(~{::title},~{::body/content()})}">
-
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="フリーランスエンジニア小幡晴香の経歴・スキル・資格紹介ページ。Java、intra-mart、COBOLなど幅広い技術に対応。">
-    <title>Haruka Obata - About</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haruka Obata - About</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="フリーランスエンジニア小幡晴香の経歴・スキル・資格紹介ページ。Java、intra-mart、COBOLなど幅広い技術に対応。">
 </head>
 
 <body>
+<header class="header">
+  <div class="header_img">
+    <a href="index.html"><img src="images/Logo_hp.jpg" alt="Haruka Logo"></a>
+  </div>
+  <div class="header_btn">
+    <a href="index.html#contact"><button class="contact_btn">お問い合わせ</button></a>
+  </div>
+</header>
 
-    <header>
-        <div th:fragment="layout-header" class="header">
-            <div class="header_img">
-                <a href="index.html"><img src="images/Logo_hp.jpg" alt="Haruka images"></a>
-            </div>
-            <div class="header_btn">
-                <a href="#contact"><input type="submit" value="お問い合わせ" class="contact_btn" /></a>
-            </div>
-        </div>
-    </header>
+<main>
+  <section>
+    <h2>経歴</h2>
 
-    <main>
-    	<section>
-        	<h1>ABOUT</h1>
-            <h3>◆経歴：</h3>
-            <div class="keireki">
+    <!-- 経歴カード -->
+    <div class="works">
+      <article class="work_card">
+        <h4>2025/8〜 現在｜官公庁業界</h4>
+        <p><strong>業務内容：</strong> 業務自動化システム構築</p>
+	<p><strong>担当作業：</strong> BloomMaker/LogicDesignerにて画面処理の実装</p>
+        <p><strong>参画フェーズ：</strong> 製造～</p>
+        <p><strong>体制：</strong> 30名規模のチームに参画</p>
+        <p><strong>使用技術：</strong> JavaScript / PostgreSQL / Linux / intra-mart（BloomMaker/LogicDesigner）</p>
+      </article>
 
-                <article>
-                    <h4>2025/8～現在　官公庁業界/業務自動化システム構築</h4>
-                    <div class="div_2rem">
-                        <table>
-                            <tr>
-                                <td>フェーズ：</td>
-                                <td>製造～</td>
-                            </tr>
-                            <tr>
-                                <td>詳細　　：</td>
-                                <td>
-                                    intra-martのBloomMakerにて画面内の処理を作成。<br>
-                                    人数：30名　メンバーでの参画
-                                </td>
-                            </tr>
-                        </table>
-                        <div><p>
-                                言語：JavaScript　/　DB　　：PostgreSQL<br>
-                                OS　：Linux　　　/　ツール：intra-mart（BloomMaker）
-                        </p></div>
-                    </div>
-                </article>
+      <article class="work_card">
+        <h4>2025/7｜パッケージ業界</h4>
+        <p><strong>業務内容：</strong> 申請システム構築</p>
+	<p><strong>担当作業：</strong> 画面モック(一覧：ViewCreator、その他：bloommaker）・ER図作成、画面遷移実装</p>
+        <p><strong>参画フェーズ：</strong> 基本設計</p>
+        <p><strong>体制：</strong> 8名規模のチームに参画</p>
+        <p><strong>使用技術：</strong> JavaScript / PostgreSQL / Linux / intra-mart（BloomMaker, ViewCreator）</p>
+      </article>
 
-                <article>
-                    <h4>2025/7～2025/7　パッケージ業界/申請システムの構築</h4>
-                    <div class="div_2rem">
-                        <table>
-                            <tr>
-                                <td>フェーズ：</td>
-                                <td>基本設計</td>
-                            </tr>
-                            <tr>
-                                <td>詳細　　：</td>
-                                <td>
-                                    画面モックの作成(一覧：ViewCreator、その他：bloommakerにて作成）、<br>
-                                    intra-martのBloomMakerにて画面遷移の設定、<br>
-                                    辞書項目の整理、ER図作成。<br>
-                                    人数：8名　メンバーでの参画
-                                </td>
-                            </tr>
-                        </table>
-                        <div><p>
-                                言語：JavaScript　/　DB　　：PostgreSQL<br>
-                                OS　：Linux　　　/　ツール：intra-mart（BloomMaker, ViewCreator）
-                        </p></div>
-                    </div>
-                </article>
+      <article class="work_card">
+        <h4>2025/6｜社内開発</h4>
+        <p><strong>業務内容：</strong> intra-martの基本操作習得</p>
+	<p><strong>担当作業：</strong> 登録・検索・一覧表示機能、交通費申請構築</p>
+        <p><strong>使用技術：</strong> JavaScript / PostgreSQL / Linux / intra-mart（BloomMaker, LogicDesigner, IM-BIS, ワークフロー）</p>
+      </article>
 
-                <article>
-                    <h4>2025/6～2025/6　社内開発/intra-martの基本操作習得</h4>
-                    <div class="div_2rem">
-                        <table>
-                            <tr>
-                                <td>詳細　　：</td>
-                                <td>intra-martのBloomMaker, LogicDesigner, IM-BIS, ワークフローの基本操作習得の<br>
-                                	ため、登録・検索・一覧表示、交通費申請を構築<br>
-                                    人数：-名
-                                </td>
-                            </tr>
-                        </table>
-                        <div><p>
-                                言語：JavaScript　/　DB　　：DB：PostgreSQL<br>
-                                OS　：Linux　　　/　ツール：intra-mart（BloomMaker, LogicDesigner, IM-BIS, ワークフロー）
-                        </p></div>
-                    </div>
-                </article>
+      <article class="work_card">
+        <h4>2023/7～2025/5｜金融業界</h4>
+        <p><strong>１．業務内容：</strong> 勘定系システム仕様変更に伴う開発支援</p>
+        <p class="sp2"><strong>  担当作業：</strong> 進捗管理、手順書作成、業務フロー作成</p>
+	<p class="sp2"><strong>  参画フェーズ：</strong> 要件定義</p>
+	<p class="sp2"><strong>  体制：</strong> 120名規模のチームに参画</p>
+        <p><strong>２．業務内容：</strong> 勘定系システムの保守開発</p>
+	<p class="sp2"><strong>  担当作業：</strong> 各種設計書・フロー図作成、実装、テスト</p>
+        <p class="sp2"><strong>  参画フェーズ：</strong> 基本設計～結合テスト</p>
+	<p class="sp2"><strong>  体制：</strong> 2名規模のチームに参画</p>
+        <p><strong>  使用技術：</strong> COBOL, Shell / OracleDB / Linux</p>
+      </article>
 
-                <article>
-                    <h4>2023/7～2025/5　金融事業</h4>
-                    <div>
-                        <ol>
-                            <li>
-                                金融機関勘定系システム全般の仕様変更に伴う開発支援
-                                <table class="div_0rem">
-                                    <tr>
-                                        <td>フェーズ：</td>
-                                        <td>要件定義</td>
-                                    </tr>
-                                    <tr>
-                                        <td>期間　　：</td>
-                                        <td>2023年7月～2024年6月</td>
-                                    </tr>
-                                    <tr>
-                                        <td>詳細　　：</td>
-                                        <td>
-                                            実際にシステムを利用している社員の方と業務要件の確定を進める。<br>
-                                            項目・区分値作成の作業手順書の作成、作業進捗管理。<br>
-                                            AS-IS業務フローの作成。<br>
-                                            人数：約120名　メンバーでの参画
-                                        </td>
-                                    </tr>
-                                </table>
-                            </li>
-                            <li>
-                                金融機関勘定系システムの保守開発
-                                <table>
-                                    <tr>
-                                        <td>フェーズ：</td>
-                                        <td>基本設計～結合テスト</td>
-                                    </tr>
-                                    <tr>
-                                        <td>期間　　：</td>
-                                        <td>2025年1月～2025年5月</td>
-                                    </tr>
-                                    <tr>
-                                        <td>詳細　　：</td>
-                                        <td>
-                                            現行システムへの仕様変更、追加を複数実装<br>
-                                            ◆内容に合わせて下記を作成または実施◆<br>
-                                            基本設計書、詳細設計書、機能設計書、<br>
-                                            システムフロー、バッチフロー、ファイルレイアウト、<br>
-                                            実装、テストケースの作成・実施<br>
-                                            人数：1～2名　メンバーでの参画
-                                        </td>
-                                    </tr>
-                                </table>
-                            </li>
-                        </ol>
-                        <div class="div_2rem">
-                            <p>
-                                言語：COBOL, Shell　/　DB：Oracle<br>
-                                OS　：Linux
-                            </p>
-                        </div>
-                    </div>
-                </article>
 
-                <article>
-                    <h4>2023/4～2023/6　社内開発</h4>
-                    <div>
-                        <ol>
-                            <li>
-                                書籍検索システムの構築
-                                <table class="div_0rem">
-                                    <tr>
-                                        <td>フェーズ：</td>
-                                        <td>製造～単体テスト</td>
-                                    </tr>
-                                    <tr>
-                                        <td>詳細　　：</td>
-                                        <td>
-                                            書籍一覧の表示、検索機能の実装<br>
-                                            人数：1名
-                                        </td>
-                                    </tr>
-                                </table>
-                            </li>
-                            <li>
-                                ECサイトへのサービス追加（ポイント交換）
-                                <table class="div_0rem">
-                                    <tr>
-                                        <td>フェーズ：</td>
-                                        <td>要件定義～結合テスト</td>
-                                    </tr>
-                                    <tr>
-                                        <td>詳細　　：</td>
-                                        <td>
-                                            ポイントで景品交換を行う機能の追加<br>
-                                            景品検索を新着順・人気順・カテゴリー順に表示、景品登録・更新の実装を担当<br>
-                                            人数：6名
-                                        </td>
-                                    </tr>
-                                </table>
-                            </li>
-                        </ol>
-                        <div class="div_2rem">
-                            <p>
-                                言語　　　　　：Java, JavaScript, HTML, CSS　/　DB　：Oracle<br>
-                                フレームワーク：Spring　/　OS：Windows　/　ツール：Eclipse, TortoiseGit
-                            </p>
-                        </div>
-                    </div>
-                </article>
+      <article class="work_card">
+        <h4>2023/4〜2023/6｜社内開発</h4>
+	<p><strong>１．業務内容：</strong> 書籍検索システム構築</p>
+        <p class="sp2"><strong>担当作業：</strong> 検索機能・一覧表示の実装</p>
+	<p class="sp2"><strong>参画フェーズ：</strong> 製造～単体テスト</p>
+	<p class="sp2"><strong>体制：</strong> 個人開発</p>
+	<p><strong>２．業務内容：</strong> ECサイトへのポイント交換機能追加</p>
+        <p class="sp2"><strong>担当作業：</strong> 景品検索・登録・更新の実装</p>
+	<p class="sp2"><strong>参画フェーズ：</strong> 基本設計～結合テスト</p>
+	<p class="sp2"><strong>体制：</strong> 6名規模のチームに参画</p>
+        <p><strong>使用技術：</strong> Java, JavaScript, HTML/CSS, Spring / OracleDB / Windows / Eclipse, TortoiseGit</p>
+      </article>
 
-                <article>
-                    <h4>2015/3～2023/2　家具小売業</h4>
-                    <div class="div_2rem">
-                        <table>
-                            <tr>
-                                <td>事業内容：</td>
-                                <td>Eコマース事業、インテリア関連用品の企画・製造・卸売</td>
-                            </tr>
-                            <tr>
-                                <td>経験業務：</td>
-                                <td>
-                                    受発注業務、カスタマーサポート、在庫管理・発注、商品掲載、<br>
-                                    提携先倉庫の管理、商品出荷
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>経験ECサイト：</td>
-                                <td>カラーミーショップ、EC-CUBE</td>
-                            </tr>
-                        </table>
-                    </div>
-                </article>
+      <article class="work_card">
+        <h4>2015/3〜2023/2｜家具小売業</h4>
+        <p><strong>業務内容：</strong> Eコマース事業（受発注、カスタマーサポート、在庫管理、商品掲載、出荷管理）</p>
+        <p><strong>利用ECサイト：</strong> カラーミーショップ、EC-CUBE</p>
+      </article>
+    </div>
+  </section>
 
-            </div>
-        </section>
+  <section>
+    <h2>スキル</h2>
+    <ul>
+      <li><strong>言語：</strong> Java, JavaScript, HTML, CSS, COBOL, Shell</li>
+      <li><strong>フレームワーク：</strong> Spring</li>
+      <li><strong>ツール：</strong> Eclipse, TortoiseGit, intra-mart</li>
+      <li><strong>DB：</strong> OracleDB, PostgreSQL</li>
+    </ul>
+  </section>
 
-        <section>
-            <h2>スキル</h2>
-            <table class="div_2rem">
-                <tr>
-                    <td>言語：</td>
-                    <td>Java, JavaScript, HTML, CSS, COBOL, Shell</td>
-                </tr>
-                <tr>
-                    <td>FW：</td>
-                    <td>Spring</td>
-                </tr>
-                <tr>
-                    <td>ツール：</td>
-                    <td>Eclipse, TortoiseGit, intra-mart</td>
-                </tr>
-                <tr>
-                    <td>DB：</td>
-                    <td>Oracle, PostgreSQL</td>
-                </tr>
-            </table>
-        </section>
+  <section>
+    <h2>資格/試験</h2>
+    <ul>
+      <li>Oracle Certified Java Programmer Silver SE 11</li>
+      <li>ORACLE MASTER Bronze DBA 2019</li>
+      <li>基本情報技術者試験 (FE)</li>
+    </ul>
+    <div class="shikaku">
+      <img src="images/SILVSE11JPN.jpg" alt="Java Silver SE 11 ロゴ">
+      <img src="images/BRZDBA19CJPN.jpg" alt="Bronze DBA 2019 ロゴ">
+    </div>
+  </section>
+</main>
 
-        <section>
-            <h2>取得資格</h2>
-            <ul>
-                <li>Oracle Certified Java Programmer Silver SE 11</li>
-                <li>ORACLE MASTER Bronze DBA 2019</li>
-            </ul>
-            <div class="shikaku">
-                <div class="img_left"><img src="images/SILVSE11JPN.jpg" alt="Java Silver SE 11 資格ロゴ"></div>
-                <div class="img_right"><img src="images/BRZDBA19CJPN.jpg" alt="Bronze DBA 2019 資格ロゴ"></div>
-            </div>
-
-            <h2>合格試験</h2>
-            <ul>
-                <li>基本情報技術者試験(FE)</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer">
-            <p class="copyright">&copy;2025 Haruka Obata portfolio</p>
-        </div>
-    </footer>
-
+<footer class="footer">
+  <p class="copyright">&copy; 2025 Haruka Obata Portfolio</p>
+</footer>
 </body>
 </html>

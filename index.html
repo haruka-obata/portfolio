@@ -1,124 +1,95 @@
 <!DOCTYPE html>
-<html lang="ja" xmlns:th="http://www.thymeleaf.org" 
-      th:replace="~{layout :: layout(~{::title},~{::body/content()})}">
-
-<head th:replace="fragments/header :: head">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <meta name="description" content="システムエンジニア 小幡晴香のポートフォリオ。安定したシステム構築を確かな技術で提供します。Java、intra-mart、Webアプリ開発など。">
-    <title>Haruka Obata Portfolio</title>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haruka Obata Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="システムエンジニア小幡晴香のポートフォリオ。Java、intra-mart、Webアプリ開発など。安定したシステム構築を提供します。">
 </head>
 
 <body>
+<header class="header">
+  <div class="header_img">
+    <a href="index.html"><img src="images/Logo_hp.jpg" alt="Haruka Logo"></a>
+  </div>
+  <div class="header_btn">
+    <a href="#contact"><button class="contact_btn">お問い合わせ</button></a>
+  </div>
+</header>
 
-	<header>
-		<div th:fragment="layout-header" class="header">
-			<div class="header_img">
-				<a href="index.html"><img src="images/Logo_hp.jpg" alt="Haruka images"></a>
-			</div>
-			<div class="header_btn">
-				<a href="#contact"><input type="submit" value="お問い合わせ" class="contact_btn" /></a>
-			</div>
-		</div>
-	</header>
+<main>
+  <!-- プロフィール -->
+  <section>
+    <h2>Profile</h2>
+    <div class="profile">
+      <div class="profile_img">
+        <img src="images/Image.png" alt="Haruka Obata">
+      </div>
+      <div class="profile_text">
+        <h3>小幡 晴香 / Haruka Obata <span>（システムエンジニア）</span></h3>
+        <p class="catch">～安定したシステム構築を、確かな技術で～</p>
+        <p>約8年間、WEBショップ企業にて顧客対応・在庫管理など幅広い業務を経験。その後SEへキャリアチェンジし、金融・官公庁・社内システム開発を中心に参画。</p>
+        <ul>
+          <li><strong>スキル：</strong> Java, JavaScript, HTML/CSS, COBOL, Shell, Spring, intra-mart</li>
+          <li><strong>DB：</strong> Oracle, PostgreSQL</li>
+          <li><strong>ツール：</strong> Eclipse, TortoiseGit, intra-mart</li>
+          <li><strong>資格：</strong> Java Silver SE11 / ORACLE Bronze DBA / 基本情報技術者</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <section>
-            <h2>Profile</h2>
-            <h3>小幡 晴香 / Haruka Obata <span>（システムエンジニア）</span></h3>
-            <div class="profile">
-	            <div class="Haruka img">
-	            	<img src="images/Image.png" alt="Haruaka images">
-	            </div>
-	
-	            <div class="Haruka prof">
-		            <p>～安定したシステム構築を、確かな技術で～</p>
-		            <ul>
-		                <li>出身地：京都府</li>
-		                <li>住まい：大阪府</li>
-		                <li>
-		                    経歴概要：
-		                    <p>約8年ほどWEBショップを運営する会社にて、顧客対応・在庫管理等を経験。<br/>
-		                    その後、SEへキャリアチェンジ。</p>
-		                </li>
-		                <li>
-		                    スキル：
-		                    <p>言語：Java, JavaScript, HTML, CSS, COBOL, Shell<br/>
-								フレームワーク：Spring<br/>
-								ツール：Eclipse, TortoiseGit, intra-mart<br/>
-								DB：Oracle, PostgreSQL</p>
-		                </li>
-		                <li>
-		                    取得資格：
-							 <p>Oracle Certified Java Programmer Silver SE 11<br/>
-							 	ORACLE MASTER Bronze DBA 2019<br/>基本情報技術者試験
-		                </li>
-		            </ul>
-	            </div>
-            </div>
-        </section>
+  <!-- 実績 -->
+  <section>
+    <h2>実績</h2>
+    <div class="works_outline">
+      <article class="work_card">
+        <h4>2025/8〜現在｜官公庁業界</h4>
+        <p>業務自動化システム構築</p>
+      </article>
+      <article class="work_card">
+        <h4>2025/7｜パッケージ業界</h4>
+        <p>申請システム構築</p>
+      </article>
+      <article class="work_card">
+        <h4>2025/6｜社内開発</h4>
+        <p>intra-martの基本操作習得</p>
+      </article>
+      <article class="work_card">
+        <h4>2023/7〜2025/5｜金融業界</h4>
+        <p>勘定系システムの保守・追加開発</p>
+      </article>
+      <article class="work_card">
+        <h4>2023/4〜2023/6｜社内開発</h4>
+        <p>書籍検索システム構築、ECサイトへのポイント交換機能追加</p>
+      </article>
+    </div>
+    <p class="right"><a href="about.html">→ 詳細はこちら</a></p>
+  </section>
 
-        <section>
-            <h2>実績</h2>
-            <table class="div_2rem">
-            	<tr>
-                    <th class="kikan"></th>
-                    <th class="gyokai"></th>
-                    <th class="gaiyo"></th>
-                </tr>
-                
-                <tr>
-                    <td>2025/8～現在</td>
-                    <td>官公庁業界</td>
-                    <td>業務自動化システム構築</td>
-                </tr>
-                <tr>
-                	<td>2025/7～2025/7</td>
-                	<td>パッケージ業界</td>
-                	<td>申請システムの構築</td>
-                </tr>
-                <tr>
-                	<td>2025/6～2025/6</td>
-                	<td>社内開発</td>
-                	<td>intra-martの基本操作習得</td>
-                </tr>
-                <tr>
-                	<td>2023/7～2025/5</td>
-                	<td>金融業界</td>
-                	<td>① 金融機関勘定系システム全般の仕様変更に伴う開発支援<br>
-	                    ② 金融機関勘定系システムの保守開発</td>
-                </tr>
-                <tr>
-                	<td>2023/4～2023/6</td>
-                	<td>社内開発</td>
-                	<td>① 書籍検索システムの構築<br>
-	                    ② ECサイトへのサービス追加（ポイント交換）</td>
-                </tr>
-            </table>
-            <p class="right"><a href="about.html">→more</a></p>
-        </section>
+  <!-- サービス -->
+  <section>
+    <h2>サービス内容</h2>
+    <p>
+      <strong>受託開発：</strong> Webシステム・業務アプリ開発<br>
+      <strong>intra-mart構築：</strong> ローコード開発ツールを用いた業務効率化システムの構築
+    </p>
+  </section>
 
-        <section>
-            <h2>サービス内容</h2>
-            <p class="servicenaiyo">
-                ソフトウェア受託開発<br>
-                intra-mart構築：ローコードツール「intra-mart」を用いて、Webアプリ開発を行います。
-            </p>
-        </section>
+  <!-- お問い合わせ -->
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <div class="contact_form">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfUd2gUnxlykgE3ZX74z4V-4y0AsUZlu9agfjBq3UWt1xS7OA/viewform?embedded=true"
+              width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0" title="お問い合わせフォーム"></iframe>
+    </div>
+  </section>
+</main>
 
-        <section>
-            <div id="contact" class="contact_form">
-		        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfUd2gUnxlykgE3ZX74z4V-4y0AsUZlu9agfjBq3UWt1xS7OA/viewform?embedded=true" width="640" height="689" frameborder="0" marginheight="0" marginwidth="0" title="お問い合わせフォーム"></iframe>
-	        </div>
-        </section>
-    </main>
-
-<footer>
-	<div class="footer">
-		<p class="copyright">&copy;2025 Haruka Obata portfolio</p>
-	</div>
+<footer class="footer">
+  <p class="copyright">&copy; 2025 Haruka Obata Portfolio</p>
 </footer>
-
 </body>
 </html>

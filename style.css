@@ -1,306 +1,230 @@
-@charset "UTF-8";
-
-/* ==========
-  全体設定
-========== */
-.header {
-    height: 4rem;
-    background-color: #2C3E50;
-    display: flex;
-    align-items: center;
-}
-
-.header_btn {
-  margin-left: auto;
-}
-.contact_btn {
-    background-color: #3498DB;
-    color: white;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-	margin-right: 1rem;
-	margin-left: auto;
-}
-
-.footer {
-    height: 2rem;
-    background-color: #2C3E50;
-}
-
+/* ------------------------------
+   共通設定
+------------------------------ */
 body {
-    font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    background-color: #ECF0F1;
-    color: #2D3436;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #F8F9FA;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-/* ==========
-  リンク
-========== */
-a {
-    color: #3498DB;
-    text-decoration: none;
+main {
+  width: 90%;
+  max-width: 1000px;   /* PC での最大幅 */
+  margin: 0 auto;      /* 中央寄せ */
+  padding: 20px 0;     /* 上下に余白 */
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 0.5em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-left: 6px solid #3a7bd5;
+  padding-left: 0.6em;
+  margin: 1.5em 0 1em;
+  color: #2c3e50;
+}
+
+p, ul {
+  margin: 0 0.5em 1em;
+}
+
+.sp2 {
+  margin-left: 2.5em
+}
+
+/* ------------------------------
+   ヘッダー
+------------------------------ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 20px;
+  background: #2C3E50;
+  color: #fff;
+}
+
+.header_img img {
+  height: 50px;
+}
+
+.contact_btn {
+  background: #fff;
+  color: #2C3E50;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.contact_btn:hover {
+  background: #2c5da6;
+  color: #fff;
+}
+
+/* ------------------------------
+   セクション見出し
+------------------------------ */
+section h2 {
+  color: #2F4F4F;
+  border-left: 5px solid #1E90FF;
+  padding-left: 10px;
+  margin-bottom: 16px;
+}
+
+/* ------------------------------
+   プロフィール
+------------------------------ */
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.profile_img img {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.profile_text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.profile_text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
+.profile_text .catch {
+  font-size: 1rem;
+  font-style: italic;
+  color: #3a7bd5;
+  margin-bottom: 1em;
+}
+
+.profile_text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile_text li {
+  margin-bottom: 0.4em;
+}
+
+/* ------------------------------
+   実績カード
+------------------------------ */
+.works_outline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.works {
+  display: flex;
+  flex-direction: column; /* 縦並び */
+  gap: 16px;              /* カード間の余白 */
+}
+
+.work_card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.work_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+}
+
+.work_card h4 {
+  margin-bottom: 0.5em;
+  font-size: 1.05rem;
+  color: #3a7bd5;
+}
+
+/* ------------------------------
+   サービス内容
+------------------------------ */
+section p strong {
+  color: #2c3e50;
+}
+
+/* ------------------------------
+   お問い合わせ
+------------------------------ */
+.contact_form {
+  margin-top: 1em;
+}
+
+iframe {
+  border: none;
+}
+
+/* ------------------------------
+   フッター
+------------------------------ */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #2c3e50;
+  color: #fff;
+  margin-top: 40px;
+  font-size: 0.85rem;
+}
+
+/* ------------------------------
+   リンク
+------------------------------ */
+aa {
+  color: #1E90FF;       /* 青系（アクセントカラー） */
+  text-decoration: underline; /* 常に下線 */
 }
 
 a:hover {
-    color: #2980B9;
-    text-decoration: underline;
+  color: #104E8B;       /* 濃い青でホバー時に変化 */
+  text-decoration: underline; /* hoverでも下線維持 */
 }
 
-/* ==========
-  セクション・カード
-========== */
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 1rem;
+.right {
+  text-align: right;
 }
 
-section {
-    background-color: #F7F9FA;
-    border: 1px solid #D5DBDB;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-/* ==========
-  見出し
-========== */
-.h_sub {
-    font-size: 1rem;
-    line-height: 1.2; /* 行の高さをフォントサイズの1.2倍に */
-    display: block;   /* ブロック化して改行を安定させる */
-    margin-top: 0.2rem; /* h1との間隔を微調整 */
-}
-
-h1, h2 {
-    border-left: 15px solid #3498DB;
-    color: #2C3E50;
-    font-size: 2rem;
-    padding-left: 2rem;
-    margin-bottom: 0.8rem;
-}
-
-h3 {
-    color: #2C3E50;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    margin-left: 1rem;
-}
-
-h4{
-    color: #2C3E50;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    margin-left: 1rem;
-}
-
-/* ==========
-  ボタン
-========== */
-button, .btn {
-    background-color: #3498DB;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1rem;
-}
-
-button:hover, .btn:hover {
-    background-color: #2980B9;
-}
-
-/* ==========
-  リスト
-========== */
-ul {
-  margin-left: 1rem;
-}
-
-.kikan .gyokai {
-	width:20%;
-}
-
-.gaiyo {
-	width:60%;
-}
-
-td {
-	vertical-align: top;
-}
-
-/* ==========
-  画像
-========== */
-.header_img {
-    width: 125px;
-    height: auto;
-    display: block;
-    margin-left: 1rem;
-}
-
-.Haruka img {
-  width: 250px;
-  height: auto;
-  border-radius: 50%;  /* 円形にする */
-  float: left;
-  margin-bottom: 15rem;
-  margin-left: 2rem;
-  margin-right: 3rem;
-}
-
-.shikaku{
-  width: 200px;
-  height: auto;
-  display: flex;
-  margin-left: 4rem;
-}
-
-.img_left {
-	float: left;
-	margin-right: 2rem;
-}
-
-img_right{
-	  float: right;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0.5rem 0;
-}
-
-
-/* ==========
-  main
-========== */
-profile{
-	width: 100%:
-}
-
-Haruka prof{
-	width: 50%:
-	float: right;
-    margin-left: 1rem;
-}
-
-.contact_form{
-	width: 100%;
-	text-align:  center;
-}
-
-.servicenaiyo {
-  margin-left: 2rem;
-}
-
-.right{
-	text-align: right;
-    margin-right: 3rem;
-}
-
-/* ==========
-  共通
-========== */
-.div_2rem {
-  margin-left: 2rem;
-}
-
-.div_4rem {
-  margin-left: 4rem;
-}
-
-
-/* ==========
-  ABOUT
-========== */
-.keireki {
-  margin-left: 1rem;
-}
-
-/* ==========
-  footer
-========== */
-.copyright{
-    color: white;
-    text-align:center;
-}
-
-/* ==========
-  レスポンシブ対応
-========== */
-@media screen and (max-width: 768px) {
-  /* ヘッダー内の配置は横並びのまま */
+/* ------------------------------
+   レスポンシブ
+------------------------------ */
+@media (max-width: 768px) {
   .header {
-    flex-direction: row;  /* ← column から修正 */
-    justify-content: space-between; /* ロゴとボタンを両端配置 */
-    align-items: center;
-    height: auto;
-    padding: 0.5rem;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .header_img {
-    margin-left: 1rem;
-  }
-
-  .header_btn {
-    margin-right: 1rem;
-  }
-  
-/* 見出しサイズ調整 */
-  h1, h2 {
-    font-size: 1.5rem;
-    padding-left: 1rem;
-  }
-  h3 {
-    font-size: 1rem;
-    margin-left: 0.5rem;
-  }
-
-  /* プロフィール部分の画像とテキストを縦並びに */
-  .Haruka img {
-    width: 60%;
-    max-width: 200px;
-    float: none;
-    display: block;
-    margin: 1rem auto;
-  }
   .profile {
-    display: block;
-  }
-  .Haruka.prof {
-    width: 100%;
-    float: none;
-    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  /* 表をスクロール可能に */
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+  .profile_text {
+    text-align: left;
   }
 
-  /* Googleフォームのiframeを幅100%に */
-  .contact_form iframe {
-    width: 100% !important;
-    height: 600px; /* 高さは適宜調整 */
-  }
-
-  /* パディング・余白を少し縮小 */
-  section {
-    padding: 0.5rem;
-    margin-bottom: 1rem;
+  .works {
+    grid-template-columns: 1fr;
   }
 }
