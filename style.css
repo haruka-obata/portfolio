@@ -2,88 +2,97 @@
    共通設定
 ------------------------------ */
 body {
-  font-family: 'Noto Sans JP', sans-serif;
-  background-color: #F8F9FA;
+  font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
+  background-color: #f5f7fa;
   color: #333;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
+  line-height: 1.8;
 }
 
 main {
-  width: 90%;
-  max-width: 1000px;   /* PC での最大幅 */
-  margin: 0 auto;      /* 中央寄せ */
-  padding: 20px 0;     /* 上下に余白 */
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-h1, h2, h3, h4 {
-  margin: 0 0 0.5em;
-  font-weight: 600;
+h1, h2, h3 {
+  color: #2c5da6;
+  margin-bottom: 10px;
 }
 
 h2 {
-  font-size: 1.6rem;
-  border-left: 6px solid #3a7bd5;
-  padding-left: 0.6em;
-  margin: 1.5em 0 1em;
-  color: #2c3e50;
+  border-left: 6px solid #5E82A6;
+  padding-left: 10px;
+  font-size: 1.4em;
 }
 
-p, ul {
-  margin: 0 0.5em 1em;
+h3 {
+  font-size: 1.1em;
+  margin-top: 20px;
 }
 
-.sp2 {
-  margin-left: 2.5em
+p, li {
+  font-size: 1rem;
 }
 
 /* ------------------------------
    ヘッダー
 ------------------------------ */
 .header {
+  background: linear-gradient(to right, #5E82A6, #2C3E50);
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.header h1 {
+  color: white;
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+.header .catchcopy {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4px 20px;
-  background: #2C3E50;
-  color: #fff;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
-.header_img img {
-  height: 50px;
-}
-
-.contact_btn {
-  background: #fff;
-  color: #2C3E50;
-  border: none;
-  padding: 8px 20px;
-  border-radius: 25px;
-  font-size: 0.95rem;
-  cursor: pointer;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
   transition: 0.3s;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
-.contact_btn:hover {
-  background: #2c5da6;
-  color: #fff;
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* ------------------------------
-   セクション見出し
+   セクション
 ------------------------------ */
-section h2 {
-  color: #2F4F4F;
-  border-left: 5px solid #1E90FF;
-  padding-left: 10px;
-  margin-bottom: 16px;
+section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 30px;
+  margin-bottom: 30px;
 }
 
 /* ------------------------------
-   プロフィール
+   自己紹介
 ------------------------------ */
 .profile {
   display: flex;
@@ -125,101 +134,177 @@ section h2 {
 }
 
 /* ------------------------------
-   実績カード
+   提供サービス
 ------------------------------ */
-.works_outline {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
+#services ul {
+  padding-left: 20px;
 }
 
-.works {
-  display: flex;
-  flex-direction: column; /* 縦並び */
-  gap: 16px;              /* カード間の余白 */
+#services li {
+  margin-bottom: 10px;
 }
 
-.work_card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.work_card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.12);
-}
-
-.work_card h4 {
-  margin-bottom: 0.5em;
-  font-size: 1.05rem;
-  color: #3a7bd5;
+.note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
 }
 
 /* ------------------------------
-   サービス内容
+   スキルテーブル
 ------------------------------ */
-section p strong {
-  color: #2c3e50;
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.skills-table th, .skills-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.skills-table th {
+  background-color: #5E82A6;
+  color: white;
+  text-align: left;
+}
+
+.skills-table tr:nth-child(even) {
+  background-color: #f9fbff;
 }
 
 /* ------------------------------
-   お問い合わせ
+   実績リスト
 ------------------------------ */
-.contact_form {
-  margin-top: 1em;
+.works-list {
+  list-style: none;
+  padding-left: 0;
 }
 
-iframe {
-  border: none;
+.works-list li {
+  background: #f9fbff;
+  border-left: 4px solid #5E82A6;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+/* ------------------------------
+   ボタン
+------------------------------ */
+.btn {
+  display: inline-block;
+  background: #5E82A6;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #2c5da6;
 }
 
 /* ------------------------------
    フッター
 ------------------------------ */
-.footer {
+footer {
   text-align: center;
-  padding: 20px;
-  background: #2c3e50;
-  color: #fff;
-  margin-top: 40px;
+  background: #2C3E50;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #aee1ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------
+   固定ボタン（お問い合わせ）
+------------------------------ */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2C3E50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.floating-btn:hover {
+  background: #2c5da6;
+}
+
+/* ------------------------------
+   Work Style リスト
+------------------------------ */
+.workstyle ul {
+  list-style: disc;
+  padding-left: 25px;
+}
+
+.workstyle li {
+  margin-bottom: 5px;
+}
+
+/* ------------------------------
+   経歴・プロジェクト（about.html用）
+------------------------------ */
+.career-block h3 {
+  margin-bottom: 5px;
+}
+
+.career-block ul {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.tech {
+  display: inline-block;
+  background: #eaf2ff;
+  color: #2c5da6;
+  padding: 3px 8px;
+  border-radius: 4px;
   font-size: 0.85rem;
+  margin-top: 4px;
 }
 
 /* ------------------------------
-   リンク
+   スマホ対応
 ------------------------------ */
-aa {
-  color: #1E90FF;       /* 青系（アクセントカラー） */
-  text-decoration: underline; /* 常に下線 */
-}
-
-a:hover {
-  color: #104E8B;       /* 濃い青でホバー時に変化 */
-  text-decoration: underline; /* hoverでも下線維持 */
-}
-
-.right {
-  text-align: right;
-}
-
-/* ------------------------------
-   レスポンシブ
------------------------------- */
-@media (max-width: 768px) {
-  .profile {
+@media screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5em;
+  }
+  nav ul {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    gap: 8px;
   }
-
-  .profile_text {
-    text-align: left;
+  section {
+    padding: 20px;
   }
-
-  .works {
-    grid-template-columns: 1fr;
+  .skills-table th, .skills-table td {
+    font-size: 0.9rem;
+  }
+  .floating-btn {
+    font-size: 0.9rem;
+    padding: 10px 16px;
   }
 }
+

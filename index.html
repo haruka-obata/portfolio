@@ -3,93 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Haruka Obata Portfolio</title>
+  <meta name="description" content="在宅対応可能なシステムエンジニア小幡晴香のポートフォリオ。intra-mart・Java・GASを用いた業務効率化や小規模システム開発を得意としています。">
+  <title>小幡晴香 | 在宅エンジニアポートフォリオ</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-  <meta name="description" content="システムエンジニア小幡晴香のポートフォリオ。Java、intra-mart、Webアプリ開発など。安定したシステム構築を提供します。">
 </head>
+
 
 <body>
 <header class="header">
-  <div class="header_img">
-    <a href="index.html"><img src="images/Logo_hp.jpg" alt="Haruka Logo"></a>
-  </div>
-  <div class="header_btn">
-    <a href="#contact"><button class="contact_btn">お問い合わせ</button></a>
-  </div>
+  <nav>
+      <ul>
+        <li><a href="#services">提供サービス</a></li>
+        <li><a href="#skills">スキル</a></li>
+        <li><a href="#works">実績</a></li>
+        <li><a href="#shikaku">資格・試験</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
 </header>
 
 <main>
-  <!-- プロフィール -->
-  <section>
-    <h2>Profile</h2>
+    <!-- 自己紹介 -->
+    <section id="about">
+      <h2>自己紹介</h2>
     <div class="profile">
       <div class="profile_img">
         <img src="images/Image.png" alt="Haruka Obata">
       </div>
       <div class="profile_text">
-        <h3>小幡 晴香 / Haruka Obata <span>（システムエンジニア）</span></h3>
-        <p class="catch">～安定したシステム構築を、確かな技術で～</p>
-        <p>約8年間、WEBショップ企業にて顧客対応・在庫管理など幅広い業務を経験。その後SEへキャリアチェンジし、金融・官公庁・社内システム開発を中心に参画。</p>
+        <h3>小幡 晴香 / Haruka Obata</h3>
+        <p class="catch">～在宅で業務効率化・システム開発を支援するエンジニア～</p>
+        <p>金融・官公庁向けシステム開発を経て、現在は <strong>intra-mart</strong> を中心に業務システム構築を担当しています。  
+      一人で要件定義からテストまで対応可能で、在宅環境での開発に慣れています。  
+      将来的には、GASを活用した自動化ツール開発にも挑戦中です。</p>
+      
+   
+      <div class="workstyle">
+        <h3>Work Style</h3>
         <ul>
-          <li><strong>スキル：</strong> Java, JavaScript, HTML/CSS, COBOL, Shell, Spring, intra-mart</li>
-          <li><strong>DB：</strong> Oracle, PostgreSQL</li>
-          <li><strong>ツール：</strong> Eclipse, TortoiseGit, intra-mart</li>
-          <li><strong>資格：</strong> Java Silver SE11 / ORACLE Bronze DBA / 基本情報技術者</li>
+          <li>完全在宅・土日祝日対応（10:00〜17:00）</li>
+          <li>チャット中心のコミュニケーション</li>
+          <li>小規模・個別案件にも柔軟対応</li>
         </ul>
+         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    
+        <!-- 提供サービス -->
+    <section id="services">
+      <h2>提供サービス</h2>
+      <ul>
+        <li>🌐 <strong>intra-mart開発</strong>：BloomMaker・LogicDesignerによる画面・ロジック構築</li>
+        <li>⚙️ <strong>業務自動化スクリプト作成</strong>：GASを用いた業務効率化ツール</li>
+        <li>🧩 <strong>Webシステム開発</strong>：Java／Springによる中小規模システムの構築</li>
+        <li>🪶 <strong>保守・テスト支援</strong>：既存コード解析・ドキュメント整備</li>
+      </ul>
+      <p class="note">※長期・短期案件どちらも対応可能です。お気軽にご相談ください。</p>
+    </section>
 
-  <!-- 実績 -->
-  <section>
-    <h2>実績</h2>
-    <div class="works_outline">
-      <article class="work_card">
-        <h4>2025/8〜現在｜官公庁業界</h4>
-        <p>業務自動化システム構築</p>
-      </article>
-      <article class="work_card">
-        <h4>2025/7｜パッケージ業界</h4>
-        <p>申請システム構築</p>
-      </article>
-      <article class="work_card">
-        <h4>2025/6｜社内開発</h4>
-        <p>intra-martの基本操作習得</p>
-      </article>
-      <article class="work_card">
-        <h4>2023/7〜2025/5｜金融業界</h4>
-        <p>勘定系システムの保守・追加開発</p>
-      </article>
-      <article class="work_card">
-        <h4>2023/4〜2023/6｜社内開発</h4>
-        <p>書籍検索システム構築、ECサイトへのポイント交換機能追加</p>
-      </article>
-    </div>
-    <p class="right"><a href="about.html">→ 詳細はこちら</a></p>
-  </section>
+    <!-- スキル -->
+    <section id="skills">
+      <h2>スキル一覧</h2>
+      <table class="skills-table">
+        <tr><th>分類</th><th>使用技術</th><th>活用シーン</th></tr>
+        <tr><td>Web開発</td><td>Java / Spring</td><td>API・業務ロジック構築</td></tr>
+        <tr><td>ローコード開発</td><td>intra-mart（BloomMaker / LogicDesigner）</td><td>申請・登録画面の設計〜実装</td></tr>
+        <tr><td>自動化</td><td>Google Apps Script</td><td>スプレッドシート・日報自動化</td></tr>
+        <tr><td>DB</td><td>Oracle / PostgreSQL</td><td>データ連携・性能改善対応</td></tr>
+        <tr><td>OS / 環境</td><td>Linux / Windows</td><td>開発環境構築・スクリプト運用</td></tr>
+      </table>
+    </section>
+    
+     <!-- 資格・試験 -->
+    <section id="shikaku">
+      <h2>資格・試験</h2>
+      <ul>
+        <li>Oracle Certified Java Programmer Silver SE 11</li>
+        <li>ORACLE MASTER Bronze DBA 2019</li>
+        <li>基本情報技術者試験 (FE)</li>
+      </ul>
+    </section>
 
-  <!-- サービス -->
-  <section>
-    <h2>サービス内容</h2>
-    <p>
-      <strong>受託開発：</strong> Webシステム・業務アプリ開発<br>
-      <strong>intra-mart構築：</strong> ローコード開発ツールを用いた業務効率化システムの構築
-    </p>
-  </section>
+    <!-- 実績 -->
+    <section id="works">
+      <h2>実績・経歴</h2>
+      <ul class="works-list">
+        <li>
+          <strong>金融系バッチ開発（COBOL／Shell）</strong><br>
+          一人で要件定義〜テストまで担当。リリース後の障害ゼロを達成。
+        </li>
+        <li>
+          <strong>intra-mart申請システム構築</strong><br>
+          LogicDesignerによるロジック設計・ER図作成を担当。チーム内の仕様確定を効率化。
+        </li>
+        <li>
+          <strong>自動化スクリプト開発（個人開発）</strong><br>
+          GASでスプレッドシートの自動集計ツールを開発。社内運用改善に貢献。
+        </li>
+      </ul>
+      <p><a href="about.html" class="btn">▶ 詳細はこちら</a></p>
+    </section>
+
 
   <!-- お問い合わせ -->
   <section id="contact">
     <h2>お問い合わせ</h2>
-    <div class="contact_form">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfUd2gUnxlykgE3ZX74z4V-4y0AsUZlu9agfjBq3UWt1xS7OA/viewform?embedded=true"
-              width="100%" height="650" frameborder="0" marginheight="0" marginwidth="0" title="お問い合わせフォーム"></iframe>
-    </div>
-  </section>
-</main>
+    <p>案件のご相談・お見積もりなどお気軽にご連絡ください。</p>
+ <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUd2gUnxlykgE3ZX74z4V-4y0AsUZlu9agfjBq3UWt1xS7OA/viewform?embedded=true" class="btn" target="_blank" rel="noopener noreferrer">Googleフォームから問い合わせ</a>
+      <p class="contact-note">またはメール：haruka.obata.engineer@gmail.com</p>
+    </section>
+  </main>
 
-<footer class="footer">
-  <p class="copyright">&copy; 2025 Haruka Obata Portfolio</p>
-</footer>
+  <footer>
+    <p>© 2025 Haruka Obata 
+  </footer>
+
+  <!-- 固定お問い合わせボタン -->
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUd2gUnxlykgE3ZX74z4V-4y0AsUZlu9agfjBq3UWt1xS7OA/viewform?embedded=true" class="floating-btn">✉ ご相談はこちら</a>
 </body>
+</html>
+
 </html>
