@@ -3,7 +3,7 @@
 ------------------------------ */
 body {
   font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
-  background-color: #f5f7fa;
+  background-color: #F8F9FA;
   color: #333;
   margin: 0;
   padding: 0;
@@ -70,7 +70,6 @@ nav ul {
 
 nav ul li a {
   color: white;
-  text-decoration: none;
   padding: 6px 12px;
   border-radius: 6px;
   transition: 0.3s;
