@@ -3,124 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="在宅対応可能なシステムエンジニア小幡晴香のポートフォリオ。intra-mart・Java・GASを用いた業務効率化や小規模システム開発を得意としています。">
+  <meta name="description" content="在宅対応可能なシステムエンジニア・小幡晴香のポートフォリオ。intra-mart、Java、GASによる業務効率化・Webシステム開発を中心に支援します。">
   <title>小幡晴香 | 在宅エンジニアポートフォリオ</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
-<header class="header">
-    <h1>Portfolio</h1>
-  <nav>
-      <ul>
-        <li><a href="#services">提供サービス</a></li>
-        <li><a href="#skills">スキル</a></li>
-        <li><a href="#works">実績</a></li>
-        <li><a href="#shikaku">資格・試験</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
-      </ul>
-    </nav>
-</header>
-
-<main>
-    <!-- 自己紹介 -->
-    <section id="about">
-      <h2>自己紹介</h2>
-    <div class="profile">
-      <div class="profile_img">
-        <img src="images/Image.png" alt="エンジニア 小幡晴香 プロフィール似顔絵">
-      </div>
-      <div class="profile_text">
-        <h3>小幡 晴香 / Haruka Obata</h3>
-        <p class="catch">～在宅で業務効率化・システム開発を支援するエンジニア～</p>
-        <p>金融・官公庁向けシステム開発を経て、現在は <strong>intra-mart</strong> を中心に業務システム構築を担当しています。  
-      一人で要件定義からテストまで対応可能で、在宅環境での開発に慣れています。  
-      将来的には、GASを活用した自動化ツール開発にも挑戦中です。</p>
-      
-   
-      <div class="workstyle">
-        <h3>Work Style</h3>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <h1><a href="#about">小幡 晴香　Portfolio</a></h1>
+      <nav>
         <ul>
-          <li>完全在宅・土日祝日対応（10:00〜17:00）</li>
-          <li>チャット中心のコミュニケーション</li>
-          <li>小規模・個別案件にも柔軟対応</li>
+          <li><a href="#services">サービス</a></li>
+          <li><a href="#skills">スキル</a></li>
+          <li><a href="#works">実績</a></li>
+          <li><a href="#shikaku">資格</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
         </ul>
-         </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 自己紹介 -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="profile">
+          <div class="profile_img">
+            <img src="images/Image.png" alt="エンジニア小幡晴香の似顔絵" loading="lazy">
+          </div>
+          <div class="profile_text">
+            <h2>小幡 晴香 / Haruka Obata</h2>
+            <p class="catch">在宅で業務効率化・システム開発を支援するエンジニア</p>
+            <p>
+              金融・官公庁向けシステム開発を経て、現在は
+              <strong>intra-mart</strong> を中心に業務システム構築を担当しています。  
+              一人で要件定義からテストまで対応可能で、在宅環境での開発に慣れています。  
+              将来的には <strong>GASによる自動化ツール開発</strong> にも挑戦中です。
+            </p>
+
+            <div class="workstyle">
+              <h3>Work Style</h3>
+              <ul>
+                <li>完全在宅・土日祝日対応（10:00〜17:00）</li>
+                <li>チャット中心のコミュニケーション</li>
+                <li>小規模・個別案件にも柔軟対応</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    
-        <!-- 提供サービス -->
-    <section id="services">
-      <h2>提供サービス</h2>
-      <ul>
-        <li>🌐 <strong>intra-mart開発</strong>：BloomMaker・LogicDesignerによる画面・ロジック構築</li>
-        <li>⚙️ <strong>業務自動化スクリプト作成</strong>：GASを用いた業務効率化ツール</li>
-        <li>🧩 <strong>Webシステム開発</strong>：Java／Springによる中小規模システムの構築</li>
-        <li>🪶 <strong>保守・テスト支援</strong>：既存コード解析・ドキュメント整備</li>
-      </ul>
-      <p class="note">※長期・短期案件どちらも対応可能です。お気軽にご相談ください。</p>
+
+    <!-- 提供サービス -->
+    <section id="services" class="section bg-light">
+      <div class="container">
+        <h2>提供サービス</h2>
+        <div class="service-cards">
+          <div class="card">
+            <h3>🌐 intra-mart開発</h3>
+            <p>BloomMaker・LogicDesignerによる画面・ロジック構築。業務申請・登録画面などを短期間で実装。</p>
+          </div>
+          <div class="card">
+            <h3>⚙️ 業務自動化スクリプト</h3>
+            <p>Google Apps Script (GAS) を用いて、スプレッドシートや日報作業を自動化。</p>
+          </div>
+          <div class="card">
+            <h3>🧩 Webシステム開発</h3>
+            <p>Java／Springを用いた中小規模システム開発。API構築や業務ロジック実装に対応。</p>
+          </div>
+          <div class="card">
+            <h3>🪶 保守・テスト支援</h3>
+            <p>既存システムのコード解析やドキュメント整備を通じ、安定運用を支援。</p>
+          </div>
+        </div>
+        <p class="note">※長期・短期案件どちらも対応可能です。お気軽にご相談ください。</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUd2gUnxlykgE3ZX74z4V-4y0AsUZlu9agfjBq3UWt1xS7OA/viewform?embedded=true" class="btn">無料相談する</a>
+      </div>
     </section>
 
     <!-- スキル -->
-    <section id="skills">
-      <h2>スキル一覧</h2>
-      <table class="skills-table">
-        <tr><th>分類</th><th>使用技術</th><th>活用シーン</th></tr>
-        <tr><td>Web開発</td><td>Java / Spring</td><td>API・業務ロジック構築</td></tr>
-        <tr><td>ローコード開発</td><td>intra-mart（BloomMaker / LogicDesigner）</td><td>申請・登録画面の設計〜実装</td></tr>
-        <tr><td>自動化</td><td>Google Apps Script</td><td>スプレッドシート・日報自動化</td></tr>
-        <tr><td>DB</td><td>Oracle / PostgreSQL</td><td>データ連携・性能改善対応</td></tr>
-        <tr><td>OS / 環境</td><td>Linux / Windows</td><td>開発環境構築・スクリプト運用</td></tr>
-      </table>
-    </section>
-    
-     <!-- 資格・試験 -->
-    <section id="shikaku">
-      <h2>資格・試験</h2>
-      <ul>
-        <li>Oracle Certified Java Programmer Silver SE 11</li>
-        <li>ORACLE MASTER Bronze DBA 2019</li>
-        <li>基本情報技術者試験 (FE)</li>
-      </ul>
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>スキル一覧</h2>
+        <table class="skills-table">
+          <tr><th>分類</th><th>使用技術</th><th>活用シーン</th></tr>
+          <tr><td>Web開発</td><td>Java / Spring</td><td>API・業務ロジック構築</td></tr>
+          <tr><td>ローコード</td><td>intra-mart（BloomMaker / LogicDesigner）</td><td>申請・登録画面設計〜実装</td></tr>
+          <tr><td>自動化</td><td>Google Apps Script</td><td>スプレッドシート・日報自動化</td></tr>
+          <tr><td>DB</td><td>Oracle / PostgreSQL</td><td>データ連携・性能改善対応</td></tr>
+          <tr><td>OS / 環境</td><td>Linux / Windows</td><td>環境構築・スクリプト運用</td></tr>
+        </table>
+      </div>
     </section>
 
     <!-- 実績 -->
-    <section id="works">
-      <h2>実績・経歴</h2>
-      <ul class="works-list">
-        <li>
-          <strong>金融系バッチ開発（COBOL／Shell）</strong><br>
-          一人で要件定義〜テストまで担当。リリース後の障害ゼロを達成。
-        </li>
-        <li>
-          <strong>intra-mart申請システム構築</strong><br>
-          LogicDesignerによるロジック設計・ER図作成を担当。チーム内の仕様確定を効率化。
-        </li>
-        <li>
-          <strong>自動化スクリプト開発（個人開発）</strong><br>
-          GASでスプレッドシートの自動集計ツールを開発。社内運用改善に貢献。
-        </li>
-      </ul>
-      <p><a href="about.html" class="btn">▶ 詳細はこちら</a></p>
+    <section id="works" class="section bg-light">
+      <div class="container">
+        <h2>実績・経歴</h2>
+        <ul class="works-list">
+          <li>
+            <strong>金融系バッチ開発（COBOL／Shell）</strong><br>
+            一人で要件定義〜テストまで担当。リリース後の障害ゼロを達成。
+          </li>
+          <li>
+            <strong>intra-mart申請システム構築</strong><br>
+            LogicDesignerでロジック設計・ER図作成を担当。チーム内仕様確定を効率化。
+          </li>
+          <li>
+            <strong>自動化スクリプト開発（個人開発）</strong><br>
+            GASでスプレッドシート自動集計ツールを作成し、運用改善に貢献。
+          </li>
+        </ul>
+        <a href="about.html" class="btn">▶ 詳細はこちら</a>
+      </div>
     </section>
 
+    <!-- 資格 -->
+    <section id="shikaku" class="section">
+      <div class="container">
+        <h2>資格・試験</h2>
+        <ul>
+          <li>Oracle Certified Java Programmer Silver SE 11</li>
+          <li>ORACLE MASTER Bronze DBA 2019</li>
+          <li>基本情報技術者試験 (FE)</li>
+        </ul>
+      </div>
+    </section>
 
-  <!-- お問い合わせ -->
-  <section id="contact">
-    <h2>お問い合わせ</h2>
-    <p>案件のご相談・お見積もりなどお気軽にご連絡ください。</p>
- <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUd2gUnxlykgE3ZX74z4V-4y0AsUZlu9agfjBq3UWt1xS7OA/viewform?embedded=true" class="btn" target="_blank" rel="noopener noreferrer">Googleフォームから問い合わせ</a>
+    <!-- お問い合わせ -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>お問い合わせ</h2>
+        <p>案件のご相談・お見積もりなどお気軽にご連絡ください。</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUd2gUnxlykgE3ZX74z4V-4y0AsUZlu9agfjBq3UWt1xS7OA/viewform?embedded=true" 
+           class="btn" target="_blank" rel="noopener noreferrer">
+          Googleフォームから問い合わせ
+        </a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Haruka Obata 
+    <p>© 2025 Haruka Obata</p>
   </footer>
 
-  <!-- 固定お問い合わせボタン -->
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUd2gUnxlykgE3ZX74z4V-4y0AsUZlu9agfjBq3UWt1xS7OA/viewform?embedded=true" class="floating-btn">✉ ご相談はこちら</a>
+  <!-- 固定ボタン -->
+  <a href="#contact" class="floating-btn">✉ ご相談はこちら</a>
 </body>
-</html>
-
 </html>
