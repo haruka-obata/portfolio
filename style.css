@@ -464,34 +464,103 @@ footer p {
   letter-spacing: .05em;
 }
 
-/* ---------- Responsive ---------- */
-/* ------------------------------
-   .privacy 
------------------------------- */
+/* ---------- Responsive (タブレット・スマホ対応) ---------- */
+@media (max-width: 768px) {
+  /* 全体の余白調整 */
+  .container {
+    width: min(calc(100% - 32px), var(--max-width));
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
 
+  /* ヘッダーのレイアウト調整 */
+  .header-inner {
+    width: min(calc(100% - 32px), var(--max-width));
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 0;
+  }
 
-.privacy main {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
+  .header nav ul {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.privacy h1, .privacy h2, .privacy h3 {
-  color: #2c5da6;
-  margin-bottom: 10px;
-}
+  /* about.html用のヘッダー同期コードの調整 */
+  body:has(> .header > h1) .header h1,
+  body:has(> .header > h1) .header nav {
+    width: min(calc(100% - 32px), var(--max-width));
+    text-align: center;
+  }
+  body:has(> .header > h1) .header nav ul {
+    justify-content: center;
+  }
 
-.privacy h2 {
-  border-left: 6px solid #5E82A6;
-  padding-left: 10px;
-  font-size: 1.4em;
-}
+  /* Hero / About セクションの調整 */
+  .about {
+    padding-top: 130px;
+    background-size: auto 400px; /* 背景画像の高さを少し縮小 */
+  }
 
-.privacy h3 {
-  font-size: 1.1em;
-  margin-top: 20px;
-}
+  /* プロフィールを縦並びに */
+  .profile {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 30px 24px;
+    text-align: center;
+  }
 
-.privacy p, .privacy li {
-  font-size: 1rem;
+  .profile_text h2 {
+    text-align: center;
+  }
+
+  .workstyle {
+    text-align: left;
+  }
+
+  .workstyle ul {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* サービスカードを1列に */
+  .service-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .card {
+    min-height: auto;
+  }
+
+  /* スキルテーブルを横スクロール可能に（はみ出し防止） */
+  .skills-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* 実績リストを1列に */
+  .works-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* ビジョン、コンタクトの調整 */
+  #vision p {
+    padding: 20px;
+  }
+
+  /* フローティングボタンのサイズ調整 */
+  .floating-btn {
+    right: 16px;
+    bottom: 16px;
+    min-width: 140px;
+    padding: 10px 16px;
+    font-size: 12px;
+  }
 }
