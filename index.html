@@ -31,7 +31,7 @@
       <div class="container">
         <div class="profile">
           <div class="profile_img">
-            <img src="images/Image.png" alt="エンジニア小幡晴香の似顔絵" loading="lazy">
+            <img src="images/Image.png" alt="エンジニア小幡晴香のイメージ画像" loading="lazy">
           </div>
           <div class="profile_text">
             <h2>小幡 晴香 / Haruka Obata</h2>
@@ -145,10 +145,34 @@
   </main>
 
   <footer>
-    <p>© 2025 Haruka Obata</p>
+    <p>© 2026 Haruka Obata</p>
   </footer>
 
   <!-- 固定ボタン -->
   <a href="#contact" class="floating-btn">✉ ご相談はこちら</a>
+  <script>
+  (() => {
+    const button = document.querySelector('.floating-btn');
+    const footer = document.querySelector('footer');
+    if (!button || !footer) return;
+
+    const updateFloatingButton = () => {
+      const footerTop = footer.getBoundingClientRect().top;
+      const buttonHeight = button.offsetHeight;
+      const gap = 24;
+      const viewportBottom = window.innerHeight;
+
+      // フッターが画面下に入っていない間は通常の固定位置。
+      // フッターが近づいたら、ボタンがフッターに重ならない位置まで上げる。
+      const maxBottom = viewportBottom - footerTop + gap;
+      button.style.bottom = `${Math.max(gap, maxBottom)}px`;
+    };
+
+    window.addEventListener('scroll', updateFloatingButton, { passive: true });
+    window.addEventListener('resize', updateFloatingButton);
+    updateFloatingButton();
+  })();
+</script>
+  
 </body>
 </html>

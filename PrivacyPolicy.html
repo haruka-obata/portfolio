@@ -10,7 +10,8 @@
 
 <body>
   <header class="header">
-    <h1>プライバシーポリシー</h1>
+      <div class="header-inner">
+      <h1>プライバシーポリシー</h1>
     <nav>
       <ul>
         <li><a href="index.html">トップ</a></li>
@@ -18,20 +19,23 @@
         <li><a href="index.html#contact">お問い合わせ</a></li>
       </ul>
     </nav>
+    </div>
   </header>
 
   <main>
+  <section id="career" class="section bg-light">
+      <div class="container">
     <section>
       <p>本ウェブサイト（以下「本サイト」）は、個人情報の重要性を認識し、適切な保護と管理を行うため、以下の方針を定めます。</p>
     </section>
 
     <section>
-      <h2>1. 個人情報の管理</h2>
+      <h3>1. 個人情報の管理</h3>
       <p>本サイトでは、利用者の個人情報を正確かつ最新の状態に保つよう努め、不正アクセス・紛失・改ざん・漏洩などを防止するために必要なセキュリティ対策を講じます。</p>
     </section>
 
     <section>
-      <h2>2. 個人情報の利用目的</h2>
+      <h3>2. 個人情報の利用目的</h3>
       <p>本サイトで取得した氏名・メールアドレスなどの個人情報は、以下の目的でのみ利用いたします。</p>
       <ul>
         <li>お問い合わせへの回答</li>
@@ -40,7 +44,7 @@
     </section>
 
     <section>
-      <h2>3. 個人情報の第三者提供</h2>
+      <h3>3. 個人情報の第三者提供</h3>
       <p>以下の場合を除き、取得した個人情報を第三者に提供することはありません。</p>
       <ul>
         <li>ご本人の同意がある場合</li>
@@ -50,23 +54,24 @@
     </section>
 
     <section>
-      <h2>4. 安全管理</h2>
+      <h3>4. 安全管理</h3>
       <p>個人情報を安全に管理するため、セキュリティ体制の維持・管理体制の整備・従業者教育を実施し、個人情報の保護に努めます。</p>
     </section>
 
     <section>
-      <h2>5. 開示・訂正・削除の請求</h2>
+      <h3>5. 開示・訂正・削除の請求</h3>
       <p>ご本人から個人情報の開示・訂正・削除の要請があった場合は、本人確認の上、速やかに対応いたします。</p>
     </section>
 
     <section>
-      <h2>6. 法令の遵守と見直し</h2>
+      <h3>6. 法令の遵守と見直し</h3>
       <p>本サイトは、日本の法令およびその他の規範を遵守し、必要に応じて本ポリシーの内容を見直し・改善します。</p>
     </section>
 
     <section>
-      <h2>7. お問い合わせ窓口</h2>
+      <h3>7. お問い合わせ窓口</h3>
       <p>本ポリシーに関するお問い合わせは、<a href="https://docs.google.com/forms/d/e/1FAIpQLSfUd2gUnxlykgE3ZX74z4V-4y0AsUZlu9agfjBq3UWt1xS7OA/viewform?embedded=true">お問い合わせフォーム</a>よりご連絡ください。</p>
+    </div>
     </section>
 
     <div class="back-link">
@@ -75,11 +80,34 @@
   </main>
 
   <footer>
-    <p>© 2025 Haruka Obata 
+    <p>© 2026 Haruka Obata 
   </footer>
 
   <!-- 固定お問い合わせボタン -->
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUd2gUnxlykgE3ZX74z4V-4y0AsUZlu9agfjBq3UWt1xS7OA/viewform?embedded=true" class="floating-btn">✉ ご相談はこちら</a>
+    <script>
+  (() => {
+    const button = document.querySelector('.floating-btn');
+    const footer = document.querySelector('footer');
+    if (!button || !footer) return;
+
+    const updateFloatingButton = () => {
+      const footerTop = footer.getBoundingClientRect().top;
+      const buttonHeight = button.offsetHeight;
+      const gap = 24;
+      const viewportBottom = window.innerHeight;
+
+      // フッターが画面下に入っていない間は通常の固定位置。
+      // フッターが近づいたら、ボタンがフッターに重ならない位置まで上げる。
+      const maxBottom = viewportBottom - footerTop + gap;
+      button.style.bottom = `${Math.max(gap, maxBottom)}px`;
+    };
+
+    window.addEventListener('scroll', updateFloatingButton, { passive: true });
+    window.addEventListener('resize', updateFloatingButton);
+    updateFloatingButton();
+  })();
+</script>
 </body>
 </html>
 

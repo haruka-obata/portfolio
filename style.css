@@ -1,256 +1,497 @@
-/* ------------------------------
-   共通設定
------------------------------- */
-body {
-  font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
-  background-color: #F8F9FA;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  line-height: 1.8;
+/* =========================================================
+   Portfolio / EC × SE × AI
+   Visual direction: Pure Blue Sky / Sunlight Gold / Fresh Green
+   ========================================================= */
+
+:root {
+  --navy: #1e3a54;       /* 画像の遠くの山並み・文字用の深いネイビー */
+  --navy-deep: #0f253a;  /* 影を落とす部分のディープネイビー */
+  --blue: #3ba1da;       /* 画像の突き抜けるような美しい青空のブルー */
+  --sky: #ebf6fa;        /* 爽やかで透明感のある水色 */
+  --cream: #fcf9f4;      /* パーカーや光を含んだ温かみのあるアイボリー */
+  --paper: #ffffff;
+  --sunlight: #f7b06d;   /* 太陽の光をイメージした、優しく柔らかなコーラルゴールド */
+  --green: #7ca675;      /* テーブルの上にある観葉植物の瑞々しいグリーン */
+  --text: #223242;       /* 視認性が高く上品なダークネイビーグレー */
+  --muted: #6b7d8e;
+  --line: rgba(60, 161, 218, .15);
+  --shadow: 0 15px 35px rgba(30, 58, 84, .06);
+  --radius: 22px;
+  --max-width: 1240px;
 }
 
-main {
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--cream);
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic, Meiryo, sans-serif;
+  line-height: 1.9;
+  letter-spacing: .025em;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ---------- Header ---------- */
+.header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 20;
+  /* 画像の上部、澄んだ青空に自然に溶け込む薄いグラデーション */
+  background: linear-gradient(to bottom, rgba(30, 58, 84, .25), rgba(30, 58, 84, 0));
+  color: #fff;
+}
+
+.header-inner {
+  width: min(calc(100% - 48px), var(--max-width));
+  min-height: 82px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.header h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(18px, 2vw, 25px);
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-shadow: 0 2px 10px rgba(0,0,0,.15);
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 34px);
+  padding: 0;
+  margin: 0;
+}
+
+.header nav a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,.15);
+}
+
+.header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 2px;
+  height: 2px;
+  background: var(--sunlight); /* 下線に光のゴールドを配置 */
+  transition: right .25s ease;
+}
+
+.header nav a:hover::after { right: 0; }
+
+/* ---------- Common ---------- */
+.container {
+  width: min(calc(100% - 48px), var(--max-width));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 92px 0;
+  position: relative;
+}
+
+.section h2 {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 48px;
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", "Noto Serif JP", serif;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-align: center;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin: 15px auto 0;
+  border-radius: 999px;
+  background: var(--blue); /* 爽やかな空の青 */
+}
+
+.bg-light {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(247, 176, 109, .15), transparent 40%),
+    linear-gradient(180deg, #f0f7fb 0%, var(--cream) 100%);
+}
+
+/* ---------- Hero / About ---------- */
+.about {
+  min-height: 520px;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,0) 0 55%, var(--cream) 74%),
+    url("ChatGPT Image 2026年9月23日 20_08_4.png") center top / auto 500px no-repeat,
+    var(--cream);
+}
+
+.about .container {
+  position: relative;
+  z-index: 2;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 42px;
+  align-items: center;
+  padding: 40px 46px;
+  border: 1px solid rgba(60, 161, 218, .12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .94);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+.profile_img {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 7px solid rgba(255,255,255,.95);
+  border-radius: 50%;
+  background: var(--sky);
+  box-shadow: 0 8px 24px rgba(30, 58, 84, .08);
+}
+
+.profile_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile_text h2 {
+  width: auto;
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(27px, 3.2vw, 38px);
+  letter-spacing: .04em;
+  text-align: left;
+}
+
+.profile_text h2::after { display: none; }
+
+.profile_text .catch {
+  margin: 0 0 20px;
+  color: var(--blue);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.profile_text p:not(.catch) { margin: 0; }
+.profile_text strong { color: var(--blue); }
+
+.workstyle {
+  margin-top: 26px;
+  padding: 18px 22px;
+  border-left: 4px solid var(--green);
+  border-radius: 0 14px 14px 0;
+  background: rgba(244, 248, 243, .9);
+}
+
+.workstyle h3 {
+  color: var(--green);
+  margin: 0 0 6px;
+  font-size: 14px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.workstyle ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 22px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.workstyle li { font-size: 13px; }
+
+/* ---------- Services ---------- */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  min-height: 215px;
+  padding: 30px 25px;
+  border: 1px solid rgba(60, 161, 218, .08);
+  border-radius: 18px;
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 8px 25px rgba(30, 58, 84, .03);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 32px rgba(30, 58, 84, .08);
+}
+
+.card h3 {
+  margin: 0 0 13px;
+  color: var(--navy);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.card p { margin: 0; color: #556575; font-size: 14px; }
+
+.note {
+  margin: 30px 0 20px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ---------- Skills ---------- */
+.skills-table {
+  width: 100%;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.skills-table th,
+.skills-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  font-size: 14px;
+}
+
+.skills-table th {
+  color: #fff;
+  background: var(--navy);
+  font-weight: 600;
+  letter-spacing: .05em;
+}
+
+.skills-table tr:last-child td { border-bottom: 0; }
+.skills-table td:first-child { width: 20%; color: var(--navy); font-weight: 700; }
+
+/* ---------- Works / About page ---------- */
+.works-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.works-list li {
+  padding: 28px 30px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,255,255,.95);
+  box-shadow: var(--shadow);
+}
+
+.works-list strong {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.tech {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ---------- about.html ヘッダー同期（劇的改善） ---------- */
+/* 暗い紺を廃止し、画像左側の透き通るような美しい青空グラデーションを完全再現 */
+body:has(> .header > h1) .header {
+  position: relative;
+  background: linear-gradient(135deg, #2b7cb6 0%, #4da2db 60%, #aedbf2 100%);
+}
+
+body:has(> .header > h1) .header h1 {
+  width: min(calc(100% - 48px), var(--max-width));
+  margin: 0 auto;
+  padding: 26px 0 4px;
+}
+
+body:has(> .header > h1) .header nav {
+  width: min(calc(100% - 48px), var(--max-width));
+  margin: 0 auto;
+  padding-bottom: 18px;
+}
+
+body:has(> .header > h1) .header nav ul { 
+  justify-content: flex-end; 
+}
+
+.back-link { 
+  padding: 40px 0 90px; 
+  background: var(--cream); 
+  text-align: center;
+}
+
+/* ---------- Vision / Contact ---------- */
+#vision p {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 34px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.contact {
+  color: #fff;
+  /* 画像の右側、美しい山並みと沈みゆく太陽の光の重なりを表現 */
+  background:
+    radial-gradient(circle at 75% 80%, rgba(247, 176, 109, .35), transparent 55%),
+    linear-gradient(135deg, var(--navy-deep), #224b70);
+}
+
+.contact h2 { color: #fff; }
+.contact h2::after { background: var(--sunlight); }
+.contact p { text-align: center; opacity: .95; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: block;
+  width: fit-content;
+  min-width: 190px;
+  margin: 28px auto 0;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  /* 青空ブルーから少し光のあたるグラデーションで、上品かつエモい印象に */
+  background: linear-gradient(135deg, #4aa6dd, #257cb2);
+  box-shadow: 0 6px 18px rgba(37, 124, 178, .25);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 10px 22px rgba(37, 124, 178, .35);
+}
+
+.contact .btn {
+  background: #fff;
+  color: var(--navy);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+}
+
+.contact .btn:hover {
+  background: var(--sky);
+  color: var(--navy-deep);
+}
+
+/* ---------- Floating CTA ---------- */
+.floating-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 165px;
+  padding: 13px 20px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, #1e3a54, #2d567c);
+  box-shadow: 0 10px 25px rgba(15, 37, 58, .2);
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.floating-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 20px 16px;
+  color: #a2b4c2;
+  background: var(--navy-deep);
+  text-align: center;
+  font-size: 12px;
+  border-top: 1px solid rgba(255,255,255,.04);
+}
+
+footer p { 
+  margin: 0; 
+  letter-spacing: .05em;
+}
+
+/* ---------- Responsive ---------- */
+/* ------------------------------
+   .privacy 
+------------------------------ */
+
+
+.privacy main {
   max-width: 960px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
-h1, h2, h3 {
+.privacy h1, .privacy h2, .privacy h3 {
   color: #2c5da6;
   margin-bottom: 10px;
 }
 
-h2 {
+.privacy h2 {
   border-left: 6px solid #5E82A6;
   padding-left: 10px;
   font-size: 1.4em;
 }
 
-h3 {
+.privacy h3 {
   font-size: 1.1em;
   margin-top: 20px;
 }
 
-p, li {
+.privacy p, .privacy li {
   font-size: 1rem;
-}
-
-/* ------------------------------
-   ヘッダー
------------------------------- */
-.header {
-  background: linear-gradient(to right, #5E82A6, #2C3E50);
-  color: white;
-  text-align: center;
-  padding: 15px 10px;
-}
-
-.header h1 {
-  font-size: 1.8em;
-  margin-bottom: 5px;
-}
-
-.header .catchcopy {
-  font-size: 1rem;
-  font-weight: 300;
-  margin-bottom: 15px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li a {
-  color: white;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: 0.3s;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* ------------------------------
-   セクション
------------------------------- */
-section {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  padding: 30px;
-  margin-bottom: 30px;
-}
-
-/* ------------------------------
-   プロフィール
------------------------------- */
-.profile {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.profile_img img {
-  width: 200px;
-  border-radius: 50%;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
-
-.profile_text {
-  flex: 1;
-  min-width: 250px;
-}
-
-/* ------------------------------
-   スキル・実績
------------------------------- */
-.skills-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-  font-size: 0.95rem;
-}
-
-.skills-table th, .skills-table td {
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-
-.skills-table th {
-  background-color: #5E82A6;
-  color: white;
-}
-
-.skills-table tr:nth-child(even) {
-  background-color: #f9fbff;
-}
-
-.works-list {
-  list-style: none;
-  padding: 0;
-}
-
-.works-list li {
-  background: #f9fbff;
-  border-left: 4px solid #5E82A6;
-  margin-bottom: 15px;
-  padding: 15px;
-  border-radius: 6px;
-}
-
-/* ------------------------------
-   ボタン
------------------------------- */
-.btn {
-  display: inline-block;
-  background: #5E82A6;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #2c5da6;
-}
-
-/* ------------------------------
-   戻るリンク
------------------------------- */
-.back-link {
-  text-align: center;
-  margin-top: 30px;
-}
-
-/* ------------------------------
-   フッター
------------------------------- */
-footer {
-  text-align: center;
-  background: #2C3E50;
-  color: white;
-  padding: 8px 10px;
-  font-size: 0.9rem;
-}
-
-footer a {
-  color: #aee1ff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* ------------------------------
-   固定ボタン
------------------------------- */
-.floating-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #2C3E50;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-  transition: 0.3s;
-}
-
-.floating-btn:hover {
-  background: #2c5da6;
-}
-
-/* ------------------------------
-   経歴・プロジェクト（about.html用）
------------------------------- */
-.tech {
-  display: inline-block;
-  background: #eaf2ff;  /* 薄い青背景 */
-  color: #2c5da6;       /* 濃い青文字 */
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  margin-top: 4px;
-}
-
-/* ------------------------------
-   スマホ対応
------------------------------- */
-@media screen and (max-width: 768px) {
-  .header h1 {
-    font-size: 1.5em;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  section {
-    padding: 20px;
-  }
-
-  .skills-table th, .skills-table td {
-    font-size: 0.9rem;
-  }
-
-  .floating-btn {
-    font-size: 0.9rem;
-    padding: 10px 16px;
-  }
 }

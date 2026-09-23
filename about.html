@@ -12,21 +12,24 @@
 
 <body>
   <header class="header">
-    <h1>実績・経歴</h1>
-    <nav>
-      <ul>
+      <div class="header-inner">
+      <h1>実績・経歴</h1>
+      <nav>
+        <ul>
         <li><a href="index.html">トップ</a></li>
         <li><a href="#career">経歴</a></li>
         <li><a href="#projects">実績</a></li>
         <li><a href="#vision">今後の展望</a></li>
-      </ul>
-    </nav>
+        </ul>
+      </nav>
+    </div>
   </header>
-
+  
   <main>
-    <section id="career">
+    <section id="career" class="section bg-light">
+      <div class="container">
       <h2>職務経歴</h2>
-      <div class="career-block">
+     <div class="career-block">
         <h3>ネットショップ運営会社（約9年）</h3>
         <ul>
           <li>受発注・在庫管理・顧客対応などの業務を経験</li>
@@ -59,7 +62,8 @@
       </div>
     </section>
 
-    <section id="projects">
+   <section id="skills" class="section">
+      <div class="container">
       <h2>主な開発実績</h2>
       <ul class="works-list">
         <li>
@@ -89,9 +93,11 @@
           レスポンシブ対応・軽量構成で自身のスキルと実績を紹介。
         </li>
       </ul>
+      </div>
     </section>
 
-    <section id="vision">
+     <section id="works" class="section bg-light">
+      <div class="container">
       <h2>今後の展望</h2>
       <p>
         現在はintra-martを中心に業務システムの設計・開発を担当。<br>
@@ -103,12 +109,37 @@
     <div class="back-link">
       <a href="index.html" class="btn">← トップへ戻る</a>
     </div>
+      </div>
   </main>
 
   <footer>
-    <p>© 2025 Haruka Obata</p>
+    <p>© 2026 Haruka Obata</p>
   </footer>
 
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUd2gUnxlykgE3ZX74z4V-4y0AsUZlu9agfjBq3UWt1xS7OA/viewform?embedded=true" class="floating-btn">✉ ご相談はこちら</a>
+  <script>
+  (() => {
+    const button = document.querySelector('.floating-btn');
+    const footer = document.querySelector('footer');
+    if (!button || !footer) return;
+
+    const updateFloatingButton = () => {
+      const footerTop = footer.getBoundingClientRect().top;
+      const buttonHeight = button.offsetHeight;
+      const gap = 24;
+      const viewportBottom = window.innerHeight;
+
+      // フッターが画面下に入っていない間は通常の固定位置。
+      // フッターが近づいたら、ボタンがフッターに重ならない位置まで上げる。
+      const maxBottom = viewportBottom - footerTop + gap;
+      button.style.bottom = `${Math.max(gap, maxBottom)}px`;
+    };
+
+    window.addEventListener('scroll', updateFloatingButton, { passive: true });
+    window.addEventListener('resize', updateFloatingButton);
+    updateFloatingButton();
+  })();
+</script>
+  
 </body>
 </html>
